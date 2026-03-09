@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galleries | Kelompok VI INFORMATIKA 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+        }
+        .gallery-item img {
+            transition: all 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1) rotate(1deg);
+            filter: brightness(50%);
+        }
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+            background: rgba(59, 130, 246, 0.2);
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-[#0b1120] text-gray-100 font-sans">
+
+    <nav class="p-5 flex justify-between items-center bg-[#0f172a]/90 sticky top-0 z-50 backdrop-blur-md border-b border-gray-800">
+        <h1 class="text-xl font-bold text-blue-500 tracking-tighter">KELOMPOK VI</h1>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="index.html" class="hover:text-blue-400 transition">Beranda</a>
+            <a href="about.html" class="hover:text-blue-400 transition">About Us</a>
+            <a href="project.html" class="hover:text-blue-400 transition">Project</a>
+            <a href="galleries.html" class="text-blue-400 underline decoration-2 underline-offset-8">Galleries</a>
+            <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <header class="py-16 text-center px-4">
+        <h2 class="text-4xl font-black mb-4">Momen & Aktivitas</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Dokumentasi perjalanan tim kami dalam merancang dan membangun proyek Informatika.</p>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-6 pb-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="gallery-item rounded-2xl aspect-square bg-gray-800 shadow-2xl">
+                <img src="https://lh3.googleusercontent.com/u/0/d/1zBcyUzpIxhRR0Sery9EMSFNyfLWI40CR" class="w-full h-full object-cover">
+                <div class="gallery-overlay">
+                    <span class="text-white font-bold border-2 border-white px-4 py-2 rounded-full uppercase text-xs tracking-widest">Sesi Diskusi</span>
+                </div>
+            </div>
+
+            <div class="gallery-item rounded-2xl aspect-square bg-gray-800 shadow-2xl">
+                <img src="https://lh3.googleusercontent.com/u/0/d/1OnpFvPdz39LxeJnxMmrzT29xee9ATKCm" alt="Coding" class="w-full h-full object-cover">
+                <div class="gallery-overlay">
+                    <span class="text-white font-bold border-2 border-white px-4 py-2 rounded-full uppercase text-xs tracking-widest">Proses Coding</span>
+                </div>
+            </div>
+
+            <div class="gallery-item rounded-2xl aspect-square bg-gray-800 shadow-2xl">
+                <img src="https://lh3.googleusercontent.com/u/0/d/1lqQyyZuzCqSImCITUz5LE3rHrvxvtzU1" alt="Collaboration" class="w-full h-full object-cover">
+                <div class="gallery-overlay">
+                    <span class="text-white font-bold border-2 border-white px-4 py-2 rounded-full uppercase text-xs tracking-widest">Kolaborasi</span>
+                </div>
+            </div>
+
+            <div class="gallery-item rounded-2xl aspect-square bg-gray-800 shadow-2xl">
+                <img src="https://lh3.googleusercontent.com/u/0/d/1qXeDHtK0A5SQrcQEHVf-fueIQnyxNTWy" alt="Presentation" class="w-full h-full object-cover">
+                <div class="gallery-overlay">
+                    <span class="text-white font-bold border-2 border-white px-4 py-2 rounded-full uppercase text-xs tracking-widest">Presentasi</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 pb-24">
+        <div class="bg-[#1e293b] p-2 rounded-3xl border border-gray-800 shadow-inner">
+            <div class="relative aspect-video rounded-2xl overflow-hidden bg-black flex items-center justify-center group">
+                <div class="absolute inset-0 flex flex-col items-center justify-center z-10 bg-black/40 group-hover:bg-black/20 transition">
+                    <button class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center hover:scale-110 transition shadow-xl">
+                        <svg class="w-8 h-8 text-white fill-current" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </button>
+                    <p class="mt-4 font-bold tracking-widest text-sm uppercase">Video Dokumentasi Kelompok VI</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1000" class="w-full h-full object-cover opacity-60">
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-10 border-t border-gray-900">
+        <p class="text-gray-600 text-[10px] tracking-[0.3em] uppercase font-bold">&copy; 2026 KELOMPOK VI INFORMATIKA 2</p>
+    </footer>
+
+</body>
+</html>
